@@ -1,0 +1,27 @@
+{
+  "name": "gestao-contratos-iguape",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "extract:data": "node ./scripts/extract-contracts.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "recharts": "3.8.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.2.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "tailwindcss": "4.2.2",
+    "typescript": "6.0.3",
+    "vite": "8.0.8",
+    "xlsx": "0.18.5"
+  }
+}

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg: #edf2f7;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --surface-strong: #f2f6fa;
+  --border: #d6e0e8;
+  --text: #102033;
+  --muted: #607284;
+  --brand: #164978;
+  --brand-strong: #0f3352;
+  --brand-soft: #e6eef6;
+  --success: #17603a;
+  --success-soft: #e5f4eb;
+  --warning: #a3620c;
+  --warning-soft: #fff3e1;
+  --danger: #b42318;
+  --danger-soft: #fce9e7;
+  --neutral-soft: #eef3f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgb(22 73 120 / 0.11), transparent 36%),
+    linear-gradient(180deg, #f7f9fc 0%, #eef3f8 34%, #ebf1f6 100%);
+  color: var(--text);
+  font-family: "Public Sans", system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgb(22 73 120 / 0.35);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border bg-[var(--surface)] shadow-sm;
+    border-color: var(--border);
+  }
+
+  .panel-muted {
+    @apply rounded-3xl border bg-[var(--surface-alt)] shadow-sm;
+    border-color: var(--border);
+  }
+
+  .section-title {
+    @apply text-base font-semibold tracking-tight text-[var(--text)] sm:text-lg;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-[var(--muted)];
+  }
+
+  .field-shell {
+    @apply h-11 w-full rounded-2xl border bg-white px-3 text-sm text-[var(--text)] shadow-sm transition;
+    border-color: var(--border);
+  }
+
+  .field-shell::placeholder {
+    color: color-mix(in srgb, var(--muted) 85%, white);
+  }
+
+  .field-shell:hover {
+    border-color: color-mix(in srgb, var(--brand) 18%, var(--border));
+  }
+
+  .field-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-[var(--muted)];
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
