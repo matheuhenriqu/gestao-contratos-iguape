@@ -1,6 +1,6 @@
-# Gestão de Contratos | Prefeitura de Iguape/SP
+# Gestão de Contratos | Prefeitura Municipal
 
-Aplicação estática institucional para consulta, organização e acompanhamento dos contratos da Prefeitura de Iguape/SP, construída a partir da planilha `CONTRATOS.xlsx`.
+Aplicação estática institucional para consulta, organização e acompanhamento de contratos da prefeitura, construída a partir da planilha `CONTRATOS.xlsx`.
 
 ## Visão geral
 
